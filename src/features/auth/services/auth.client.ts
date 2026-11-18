@@ -10,3 +10,7 @@ export function login(input: LoginInput) {
 export function register(input: RegisterInput) {
   return apiFetch<SessionUser>("/api/auth/register", { method: "POST", body: input });
 }
+
+export function logout() {
+  return apiFetch<void>("/api/auth/logout", { method: "POST" });
+}
